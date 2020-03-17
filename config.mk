@@ -19,3 +19,10 @@ ifeq ($(EXTRA_FOD_ANIMATIONS),true)
 DEVICE_PACKAGE_OVERLAYS += vendor/addons/overlay/fod
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/addons/overlay/fod
 endif
+
+# Offline charger
+ifeq ($(pixel_charging),true)
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
+endif
