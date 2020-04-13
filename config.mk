@@ -19,3 +19,15 @@ ifeq ($(EXTRA_FOD_ANIMATIONS),true)
 DEVICE_PACKAGE_OVERLAYS += vendor/addons/overlay/fod
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/addons/overlay/fod
 endif
+
+ifeq ($(TARGET_FLATTEN_APEX),false)
+$(call inherit-product, vendor/addons/apex/apex.mk)
+
+# Apex Namespace
+PRODUCT_SOONG_NAMESPACES += vendor/addons/apex/apex_images
+
+# Include package overlays
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/addons/overlay/frameworks/base/core/res/res/values/config.xml
+DEVICE_PACKAGE_OVERLAYS += vendor/addons/overlay
+endif
+
