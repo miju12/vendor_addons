@@ -31,3 +31,11 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/addons/overlay/frameworks/base/c
 DEVICE_PACKAGE_OVERLAYS += vendor/addons/overlay
 endif
 
+# Prebuilt Packages
+PRODUCT_PACKAGES += \
+    NexusWallpapersStubPrebuilt2019Static \
+    PixelThemesStub2019
+
+# Files
+#PRODUCT_COPY_FILES += vendor/addons/etc/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
+#PRODUCT_COPY_FILES += vendor/addons/fonts/ArbutusSlab-Regular.ttf:$(TARGET_COPY_OUT_PRODUCT)/fonts/ArbutusSlab-Regular.ttf
